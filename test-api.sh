@@ -11,7 +11,9 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # API URL - update this with your deployed URL
-API_URL="https://your-api-url.vercel.app/api/indicators"
+# For local testing: API_URL="http://localhost:3000/api/indicators"
+# For production: API_URL="https://your-api-url.vercel.app/api/indicators"
+API_URL="${1:-https://your-api-url.vercel.app/api/indicators}"
 
 echo -e "${BLUE}🎯 Testing API Endpoint: ${API_URL}${NC}"
 echo ""
