@@ -127,3 +127,4 @@ trading-indicators-api/
 ## License
 
 MIT License
+# Updated to ensure auth disabled
