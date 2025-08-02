@@ -1,0 +1,16 @@
+{
+  "name": "trading-indicators-api",
+  "version": "1.0.0",
+  "description": "Trading indicators API for Make.com automation",
+  "main": "api/indicators.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build needed'",
+    "start": "echo 'Use vercel dev for local development'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "18.x"
+  }
+}
