@@ -3,5 +3,15 @@
     "api/indicators.js": {
       "maxDuration": 10
     }
-  }
+  },
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ]
 }

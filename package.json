@@ -4,13 +4,9 @@
   "description": "Trading indicators API for Make.com automation",
   "main": "api/indicators.js",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'No build needed'",
-    "start": "echo 'Use vercel dev for local development'"
+    "build": "echo 'No build needed'"
   },
-  "dependencies": {},
-  "devDependencies": {},
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   }
 }

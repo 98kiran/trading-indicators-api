@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trading Indicators API</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        code { background-color: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        .status { color: #28a745; font-weight: bold; }
+        .endpoint { background-color: #e7f3ff; padding: 10px; border-left: 4px solid #0066cc; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Trading Indicators API</h1>
+    <p>API endpoint: <code>/api/indicators</code></p>
+    <p class="status">Status: ✅ Online</p>
+    
+    <div class="endpoint">
+        <h2>Usage</h2>
+        <p><strong>Endpoint:</strong> <code>POST /api/indicators</code></p>
+        <p><strong>Content-Type:</strong> <code>application/json</code></p>
+    </div>
+    
+    <h3>Request Format:</h3>
+    <pre>{
+  "Data": {
+    "Data": [
+      {"close": 735, "high": 736, "low": 734, "volumefrom": 100}
+    ]
+  }
+}</pre>
+
+    <h3>Features:</h3>
+    <ul>
+        <li>📈 Moving Averages (SMA 10/20/50, EMA 12/26)</li>
+        <li>📊 MACD with Signal Line</li>
+        <li>🎯 RSI (14-period)</li>
+        <li>📉 Bollinger Bands</li>
+        <li>⚡ Stochastic Oscillator</li>
+        <li>📊 Volume Analysis</li>
+        <li>🎯 Support/Resistance Levels</li>
+        <li>📈 Volatility Calculations</li>
+        <li>🤖 Automated Trading Signals</li>
+    </ul>
+
+    <h3>Example Response:</h3>
+    <pre>{
+  "success": true,
+  "data": {
+    "current_price": 735,
+    "sma_20": 728.5,
+    "rsi_14": 65.2,
+    "bollinger_bands": {
+      "upper": 742.1,
+      "middle": 735.0,
+      "lower": 727.9
+    },
+    "signals": [
+      {
+        "type": "bullish",
+        "indicator": "rsi_oversold",
+        "strength": "high"
+      }
+    ]
+  },
+  "timestamp": "2024-01-01T12:00:00.000Z"
+}</pre>
+
+    <p><small>Designed for Make.com automation workflows</small></p>
+</body>
+</html>
