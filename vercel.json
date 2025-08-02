@@ -1,7 +1,7 @@
 {
   "functions": {
-    "api/indicators.js": {
-      "maxDuration": 10
+    "api/*.js": {
+      "runtime": "nodejs18.x"
     }
   }
 }
