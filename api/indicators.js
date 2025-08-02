@@ -236,23 +236,6 @@ function calculateRSI(prices, period = 14) {
   return 100 - (100 / (1 + rs));
 }
 
-function calculateMACD(prices) {
-  const ema12 = calculateEMA(prices, 12);
-  const ema26 = calculateEMA(prices, 26);
-  
-  if (!ema12 || !ema26) return null;
-  
-  const macdLine = ema12 - ema26;
-  
-  // Calculate signal line (9-period EMA of MACD line)
-  // For simplicity, we'll return just the MACD line
-  return {
-    macd: macdLine,
-    signal: macdLine * 0.9, // Simplified signal line
-    histogram: macdLine * 0.1
-  };
-}
-
 function calculateBollingerBands(prices, period = 20, stdDev = 2) {
   const sma = calculateSMA(prices, period);
   if (!sma) return null;
@@ -265,24 +248,6 @@ function calculateBollingerBands(prices, period = 20, stdDev = 2) {
     upper: sma + (standardDeviation * stdDev),
     middle: sma,
     lower: sma - (standardDeviation * stdDev)
-  };
-}
-
-function calculateStochastic(highs, lows, closes, period = 14) {
-  if (highs.length < period) return null;
-  
-  const recentHighs = highs.slice(-period);
-  const recentLows = lows.slice(-period);
-  const currentClose = closes[closes.length - 1];
-  
-  const highestHigh = Math.max(...recentHighs);
-  const lowestLow = Math.min(...recentLows);
-  
-  const k = ((currentClose - lowestLow) / (highestHigh - lowestLow)) * 100;
-  
-  return {
-    k: k,
-    d: k * 0.9 // Simplified D line
   };
 }
 
